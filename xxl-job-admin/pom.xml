@@ -77,6 +77,19 @@
 
 	<build>
 		<plugins>
+			<!-- 关键：admin 大量 Controller（JobLogController/JobGroupController 的 pageList 等）
+			     使用了裸 @RequestParam（不带 value），必须带 -parameters 编译，
+			     否则 Spring 反射拿不到参数名，运行时抛
+			     "Name for argument of type [int] not specified ... Ensure that the compiler uses the '-parameters' flag"。
+			     根 POM 的 <parameters>true</parameters> 被包在只含 xxl-job-core 的 profile 内，
+			     单独构建/运行 admin 模块时该 profile 不生效，故在此无条件声明。 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<parameters>true</parameters>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

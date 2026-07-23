@@ -1817,3 +1817,1564 @@ java.lang.RuntimeException: 权限拦截[username=null]
 2026-07-22 14:41:38.203 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 18080 (http) with context path '/xxl-job-admin'
 2026-07-22 14:41:38.209 [main] INFO  c.x.job.admin.XxlJobAdminApplication - Started XxlJobAdminApplication in 2.263 seconds (process running for 2.857)
 2026-07-22 14:41:42.005 [xxl-job, admin JobScheduleHelper#scheduleThread] INFO  c.x.j.a.b.s.thread.JobScheduleHelper - >>>>>>>>> init xxl-job admin scheduler success.
+2026-07-22 14:43:29.033 [http-nio-18080-exec-4] ERROR c.x.j.a.f.w.e.WebHandlerExceptionResolver - WebExceptionResolver:{}
+java.lang.RuntimeException: 权限拦截[username=null]
+	at com.xxl.job.admin.framework.util.JobGroupPermissionUtil.validJobGroupPermission(JobGroupPermissionUtil.java:40)
+	at com.xxl.job.admin.business.controller.JobInfoController.add(JobInfoController.java:103)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at com.xxl.job.admin.framework.web.casdoor.MachineAuthFilter.doFilter(MachineAuthFilter.java:83)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at com.xxl.job.admin.framework.web.casdoor.HeadlessAccessFilter.doFilter(HeadlessAccessFilter.java:57)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-07-22 14:43:42.185 [http-nio-18080-exec-6] ERROR c.x.j.a.f.w.e.WebHandlerExceptionResolver - WebExceptionResolver:{}
+java.lang.RuntimeException: 权限拦截[username=null]
+	at com.xxl.job.admin.framework.util.JobGroupPermissionUtil.validJobGroupPermission(JobGroupPermissionUtil.java:40)
+	at com.xxl.job.admin.business.controller.JobInfoController.add(JobInfoController.java:103)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at com.xxl.job.admin.framework.web.casdoor.MachineAuthFilter.doFilter(MachineAuthFilter.java:83)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at com.xxl.job.admin.framework.web.casdoor.HeadlessAccessFilter.doFilter(HeadlessAccessFilter.java:57)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-07-22 14:47:38.652 [JobRegistryHelper#registryMonitorThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobRegistryHelper#registryMonitorThread] stop.
+2026-07-22 14:47:38.652 [JobCompleteHelper#jobMonitorThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobCompleteHelper#jobMonitorThread] stop.
+2026-07-22 14:47:38.652 [JobFailAlarmMonitorHelper#monitorThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobFailAlarmMonitorHelper#monitorThread] stop.
+2026-07-22 14:47:38.652 [JobLogReportHelper#logReportThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobLogReportHelper#logReportThread] stop.
+2026-07-22 14:47:38.665 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-22 14:47:38.676 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-07-22 14:47:38.682 [SpringApplicationShutdownHook] INFO  c.x.s.core.bootstrap.XxlSsoBootstrap - >>>>>>>>>>> xxl-sso XxlSsoBootstrap stopped.
+2026-07-22 14:47:41.819 [main] INFO  c.x.job.admin.XxlJobAdminApplication - Starting XxlJobAdminApplication using Java 17.0.19 with PID 31053 (/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes started by huanglei in /Users/huanglei/Workspace/Codes/stone/service/stone-job-admin)
+2026-07-22 14:47:41.822 [main] INFO  c.x.job.admin.XxlJobAdminApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-22 14:47:42.614 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 18080 (http)
+2026-07-22 14:47:42.624 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-18080"]
+2026-07-22 14:47:42.625 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-22 14:47:42.625 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-22 14:47:42.652 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 712 ms
+2026-07-22 14:47:43.035 [JobRegistryHelper#registryMonitorThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobRegistryHelper#registryMonitorThread] start.
+2026-07-22 14:47:43.035 [JobFailAlarmMonitorHelper#monitorThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobFailAlarmMonitorHelper#monitorThread] start.
+2026-07-22 14:47:43.036 [JobCompleteHelper#jobMonitorThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobCompleteHelper#jobMonitorThread] start.
+2026-07-22 14:47:43.036 [JobLogReportHelper#logReportThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobLogReportHelper#logReportThread] start.
+2026-07-22 14:47:43.037 [main] INFO  c.x.j.a.b.s.c.XxlJobAdminBootstrap - >>>>>>>>> xxl-job admin start success.
+2026-07-22 14:47:43.048 [JobLogReportHelper#logReportThread] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2026-07-22 14:47:43.100 [main] INFO  c.x.s.core.bootstrap.XxlSsoBootstrap - >>>>>>>>>>> xxl-sso XxlSsoBootstrap started.
+2026-07-22 14:47:43.126 [main] INFO  c.x.s.c.a.i.XxlSsoWebInterceptor - XxlSsoWebInterceptor init.
+2026-07-22 14:47:43.313 [JobLogReportHelper#logReportThread] INFO  com.zaxxer.hikari.pool.HikariPool - HikariCP - Added connection com.mysql.cj.jdbc.ConnectionImpl@35dd2c1d
+2026-07-22 14:47:43.314 [JobLogReportHelper#logReportThread] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Start completed.
+2026-07-22 14:47:43.404 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-07-22 14:47:43.445 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-18080"]
+2026-07-22 14:47:43.457 [main] INFO  o.a.c.c.C.[.[.[/xxl-job-admin] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-22 14:47:43.457 [main] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-22 14:47:43.459 [main] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-07-22 14:47:43.459 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 18080 (http) with context path '/xxl-job-admin'
+2026-07-22 14:47:43.464 [main] INFO  c.x.job.admin.XxlJobAdminApplication - Started XxlJobAdminApplication in 1.865 seconds (process running for 2.429)
+2026-07-22 14:47:43.468 [JobRegistryHelper#registryMonitorThread] INFO  c.x.j.a.b.s.thread.JobRegistryHelper - >>>>>>>>>>> xxl-job, JobRegistryHelper, detect changes and refresh JobGroupCache success, appname2GroupCache:{stone-executor=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='http://192.168.2.189:9999/', accessToken='default_token', updateTime=null}, xxl-job-executor-sample-ai=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, xxl-job-executor-sample=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}}, id2GroupCache:{1=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 2=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 3=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='http://192.168.2.189:9999/', accessToken='default_token', updateTime=null}}
+2026-07-22 14:47:48.001 [xxl-job, admin JobScheduleHelper#scheduleThread] INFO  c.x.j.a.b.s.thread.JobScheduleHelper - >>>>>>>>> init xxl-job admin scheduler success.
+2026-07-22 15:07:05.372 [HikariCP:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2297335a (Communications link failure
+
+The last packet successfully received from the server was 417,700 milliseconds ago. The last packet sent successfully to the server was 417,704 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:07:09.511 [JobFailAlarmMonitorHelper#monitorThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@35dd2c1d (Communications link failure
+
+The last packet successfully received from the server was 307,218 milliseconds ago. The last packet sent successfully to the server was 307,225 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:07:09.511 [xxl-job, admin JobScheduleHelper#scheduleThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@44ad2502 (Communications link failure
+
+The last packet successfully received from the server was 304,466 milliseconds ago. The last packet sent successfully to the server was 304,471 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:07:11.520 [JobFailAlarmMonitorHelper#monitorThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7792320e (Communications link failure
+
+The last packet successfully received from the server was 309,182 milliseconds ago. The last packet sent successfully to the server was 309,187 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:07:11.520 [xxl-job, admin JobScheduleHelper#scheduleThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@405cf3fc (Communications link failure
+
+The last packet successfully received from the server was 311,478 milliseconds ago. The last packet sent successfully to the server was 311,487 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:07:12.658 [HikariCP:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2259b18c (Communications link failure
+
+The last packet successfully received from the server was 419,831 milliseconds ago. The last packet sent successfully to the server was 419,837 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:07:13.343 [HikariCP:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariCP - Thread starvation or clock leap detected (housekeeper delta=5m27s499ms).
+2026-07-22 15:07:13.525 [xxl-job, admin JobScheduleHelper#scheduleThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4180d373 (Communications link failure
+
+The last packet successfully received from the server was 383,986 milliseconds ago. The last packet sent successfully to the server was 383,992 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:07:13.526 [JobFailAlarmMonitorHelper#monitorThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3202eedc (Communications link failure
+
+The last packet successfully received from the server was 408,568 milliseconds ago. The last packet sent successfully to the server was 408,576 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:07:15.531 [JobFailAlarmMonitorHelper#monitorThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@399c9fb1 (Communications link failure
+
+The last packet successfully received from the server was 336,294 milliseconds ago. The last packet sent successfully to the server was 336,298 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:07:15.531 [xxl-job, admin JobScheduleHelper#scheduleThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3ff8e61d (Communications link failure
+
+The last packet successfully received from the server was 378,982 milliseconds ago. The last packet sent successfully to the server was 378,988 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:07:27.840 [JobRegistryHelper#registryMonitorThread] INFO  c.x.j.a.b.s.thread.JobRegistryHelper - >>>>>>>>>>> xxl-job, JobRegistryHelper, detect changes and refresh JobGroupCache success, appname2GroupCache:{stone-executor=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, xxl-job-executor-sample-ai=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, xxl-job-executor-sample=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}}, id2GroupCache:{1=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 2=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 3=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='null', accessToken='default_token', updateTime=null}}
+2026-07-22 15:07:30.101 [JobRegistryHelper#registryMonitorThread] INFO  c.x.j.a.b.s.thread.JobRegistryHelper - >>>>>>>>>>> xxl-job, JobRegistryHelper, detect changes and refresh JobGroupCache success, appname2GroupCache:{stone-executor=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='http://192.168.2.189:9999/', accessToken='default_token', updateTime=null}, xxl-job-executor-sample-ai=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, xxl-job-executor-sample=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}}, id2GroupCache:{1=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 2=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 3=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='http://192.168.2.189:9999/', accessToken='default_token', updateTime=null}}
+2026-07-22 15:15:21.292 [xxl-job, admin JobScheduleHelper#scheduleThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6f3a2d2c (Communications link failure
+
+The last packet successfully received from the server was 451,247 milliseconds ago. The last packet sent successfully to the server was 451,252 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:15:23.316 [xxl-job, admin JobScheduleHelper#scheduleThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@68e7cfe4 (Communications link failure
+
+The last packet successfully received from the server was 473,215 milliseconds ago. The last packet sent successfully to the server was 473,220 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:15:23.800 [JobCompleteHelper#jobMonitorThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6fe5d160 (Communications link failure
+
+The last packet successfully received from the server was 473,774 milliseconds ago. The last packet sent successfully to the server was 473,782 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:15:23.800 [JobLogReportHelper#logReportThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4e522b9d (Communications link failure
+
+The last packet successfully received from the server was 453,784 milliseconds ago. The last packet sent successfully to the server was 453,789 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:15:25.320 [xxl-job, admin JobScheduleHelper#scheduleThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5fa7cfbb (Communications link failure
+
+The last packet successfully received from the server was 495,452 milliseconds ago. The last packet sent successfully to the server was 495,456 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:15:25.804 [JobCompleteHelper#jobMonitorThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@61e72979 (Communications link failure
+
+The last packet successfully received from the server was 494,228 milliseconds ago. The last packet sent successfully to the server was 494,233 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:15:25.805 [JobLogReportHelper#logReportThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@40a0b73 (Communications link failure
+
+The last packet successfully received from the server was 494,129 milliseconds ago. The last packet sent successfully to the server was 494,133 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:15:26.295 [JobFailAlarmMonitorHelper#monitorThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@19e313c5 (Communications link failure
+
+The last packet successfully received from the server was 492,705 milliseconds ago. The last packet sent successfully to the server was 492,710 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:15:26.295 [JobRegistryHelper#registryMonitorThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2893c752 (Communications link failure
+
+The last packet successfully received from the server was 492,611 milliseconds ago. The last packet sent successfully to the server was 492,616 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:15:26.303 [xxl-job, admin JobRegistryMonitorHelper-registryOrRemoveThreadPool-142590129] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@74424307 (Communications link failure
+
+The last packet successfully received from the server was 490,708 milliseconds ago. The last packet sent successfully to the server was 490,713 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 15:15:28.326 [JobRegistryHelper#registryMonitorThread] INFO  c.x.j.a.b.s.thread.JobRegistryHelper - >>>>>>>>>>> xxl-job, JobRegistryHelper, detect changes and refresh JobGroupCache success, appname2GroupCache:{stone-executor=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, xxl-job-executor-sample-ai=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, xxl-job-executor-sample=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}}, id2GroupCache:{1=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 2=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 3=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='null', accessToken='default_token', updateTime=null}}
+2026-07-22 15:15:32.286 [JobRegistryHelper#registryMonitorThread] INFO  c.x.j.a.b.s.thread.JobRegistryHelper - >>>>>>>>>>> xxl-job, JobRegistryHelper, detect changes and refresh JobGroupCache success, appname2GroupCache:{stone-executor=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='http://192.168.2.189:9999/', accessToken='default_token', updateTime=null}, xxl-job-executor-sample-ai=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, xxl-job-executor-sample=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}}, id2GroupCache:{1=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 2=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 3=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='http://192.168.2.189:9999/', accessToken='default_token', updateTime=null}}
+2026-07-22 15:15:37.629 [HikariCP:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariCP - Thread starvation or clock leap detected (housekeeper delta=7m54s280ms).
+2026-07-22 15:25:41.948 [http-nio-18080-exec-10] INFO  c.x.j.a.b.s.impl.XxlJobServiceImpl - >>>>>>>>>>> xxl-job operation log: operator = casdoor_service, type = jobinfo-save, content = {"id":5,"jobGroup":1,"name":"测试","author":"测试","alarmEmail":"","scheduleType":"CRON","scheduleConf":"0 0 * * * ?","misfireStrategy":"DO_NOTHING","executorRouteStrategy":"FIRST","executorHandler":"demoJobHandler","executorParam":"","executorBlockStrategy":"SERIAL_EXECUTION","executorTimeout":0,"executorFailRetryCount":0,"glueType":"BEAN","glueSource":"","glueRemark":"","glueUpdatetime":"2026-07-22 15:25:41","childJobId":"","triggerStatus":1,"triggerLastTime":0,"triggerNextTime":0,"addTime":"2026-07-22 15:25:41","updateTime":"2026-07-22 15:25:41"}
+2026-07-22 15:25:45.032 [xxl-job, admin JobScheduleHelper#scheduleThread] WARN  c.x.j.a.b.s.m.s.MisfireDoNothing - >>>>>>>>>>> xxl-job, schedule MisfireDoNothing: jobId = 5
+2026-07-22 15:26:46.778 [http-nio-18080-exec-4] INFO  c.x.j.a.b.s.impl.XxlJobServiceImpl - >>>>>>>>>>> xxl-job operation log: operator = casdoor_service, type = jobinfo-trigger, content = 5
+2026-07-22 15:27:42.572 [http-nio-18080-exec-7] INFO  c.x.j.a.b.s.impl.XxlJobServiceImpl - >>>>>>>>>>> xxl-job operation log: operator = casdoor_service, type = jobinfo-trigger, content = 5
+2026-07-22 15:28:17.516 [http-nio-18080-exec-9] ERROR c.x.j.a.f.w.e.WebHandlerExceptionResolver - WebExceptionResolver:{}
+java.lang.IllegalArgumentException: Name for argument of type [int] not specified, and parameter name information not available via reflection. Ensure that the compiler uses the '-parameters' flag.
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.updateNamedValueInfo(AbstractNamedValueMethodArgumentResolver.java:184)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.getNamedValueInfo(AbstractNamedValueMethodArgumentResolver.java:159)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:106)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at com.xxl.job.admin.framework.web.casdoor.MachineAuthFilter.doFilter(MachineAuthFilter.java:96)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at com.xxl.job.admin.framework.web.casdoor.HeadlessAccessFilter.doFilter(HeadlessAccessFilter.java:57)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-07-22 15:33:37.582 [HikariCP:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariCP - Retrograde clock change detected (housekeeper delta=29s785ms), soft-evicting connections from pool.
+2026-07-22 15:50:14.106 [JobFailAlarmMonitorHelper#monitorThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobFailAlarmMonitorHelper#monitorThread] stop.
+2026-07-22 15:50:14.106 [JobCompleteHelper#jobMonitorThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobCompleteHelper#jobMonitorThread] stop.
+2026-07-22 15:50:14.106 [JobLogReportHelper#logReportThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobLogReportHelper#logReportThread] stop.
+2026-07-22 15:50:14.106 [JobRegistryHelper#registryMonitorThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobRegistryHelper#registryMonitorThread] stop.
+2026-07-22 15:50:14.112 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-22 15:50:14.114 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-07-22 15:50:14.118 [SpringApplicationShutdownHook] INFO  c.x.s.core.bootstrap.XxlSsoBootstrap - >>>>>>>>>>> xxl-sso XxlSsoBootstrap stopped.
+2026-07-22 15:50:20.481 [main] INFO  c.x.job.admin.XxlJobAdminApplication - Starting XxlJobAdminApplication using Java 17.0.19 with PID 34017 (/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes started by huanglei in /Users/huanglei/Workspace/Codes/stone/service/stone-job-admin)
+2026-07-22 15:50:20.484 [main] INFO  c.x.job.admin.XxlJobAdminApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-22 15:50:21.367 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 18080 (http)
+2026-07-22 15:50:21.375 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-18080"]
+2026-07-22 15:50:21.375 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-22 15:50:21.375 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-22 15:50:21.399 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 772 ms
+2026-07-22 15:50:21.767 [JobRegistryHelper#registryMonitorThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobRegistryHelper#registryMonitorThread] start.
+2026-07-22 15:50:21.767 [JobFailAlarmMonitorHelper#monitorThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobFailAlarmMonitorHelper#monitorThread] start.
+2026-07-22 15:50:21.768 [JobCompleteHelper#jobMonitorThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobCompleteHelper#jobMonitorThread] start.
+2026-07-22 15:50:21.768 [JobLogReportHelper#logReportThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobLogReportHelper#logReportThread] start.
+2026-07-22 15:50:21.770 [main] INFO  c.x.j.a.b.s.c.XxlJobAdminBootstrap - >>>>>>>>> xxl-job admin start success.
+2026-07-22 15:50:21.779 [JobCompleteHelper#jobMonitorThread] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2026-07-22 15:50:21.832 [main] INFO  c.x.s.core.bootstrap.XxlSsoBootstrap - >>>>>>>>>>> xxl-sso XxlSsoBootstrap started.
+2026-07-22 15:50:21.859 [main] INFO  c.x.s.c.a.i.XxlSsoWebInterceptor - XxlSsoWebInterceptor init.
+2026-07-22 15:50:22.065 [JobCompleteHelper#jobMonitorThread] INFO  com.zaxxer.hikari.pool.HikariPool - HikariCP - Added connection com.mysql.cj.jdbc.ConnectionImpl@23c14e4
+2026-07-22 15:50:22.067 [JobCompleteHelper#jobMonitorThread] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Start completed.
+2026-07-22 15:50:22.199 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-07-22 15:50:22.231 [JobRegistryHelper#registryMonitorThread] INFO  c.x.j.a.b.s.thread.JobRegistryHelper - >>>>>>>>>>> xxl-job, JobRegistryHelper, detect changes and refresh JobGroupCache success, appname2GroupCache:{stone-executor=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='http://192.168.2.189:9999/', accessToken='default_token', updateTime=null}, xxl-job-executor-sample-ai=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, xxl-job-executor-sample=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}}, id2GroupCache:{1=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 2=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 3=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='http://192.168.2.189:9999/', accessToken='default_token', updateTime=null}}
+2026-07-22 15:50:22.238 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-18080"]
+2026-07-22 15:50:22.249 [main] INFO  o.a.c.c.C.[.[.[/xxl-job-admin] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-22 15:50:22.249 [main] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-22 15:50:22.250 [main] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-07-22 15:50:22.251 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 18080 (http) with context path '/xxl-job-admin'
+2026-07-22 15:50:22.255 [main] INFO  c.x.job.admin.XxlJobAdminApplication - Started XxlJobAdminApplication in 1.977 seconds (process running for 2.793)
+2026-07-22 15:50:26.000 [xxl-job, admin JobScheduleHelper#scheduleThread] INFO  c.x.j.a.b.s.thread.JobScheduleHelper - >>>>>>>>> init xxl-job admin scheduler success.
+2026-07-22 16:21:30.255 [JobRegistryHelper#registryMonitorThread] INFO  c.x.j.a.b.s.thread.JobRegistryHelper - >>>>>>>>>>> xxl-job, JobRegistryHelper, detect changes and refresh JobGroupCache success, appname2GroupCache:{stone-executor=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, xxl-job-executor-sample-ai=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, xxl-job-executor-sample=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}}, id2GroupCache:{1=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 2=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 3=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='null', accessToken='default_token', updateTime=null}}
+2026-07-22 16:22:30.073 [JobRegistryHelper#registryMonitorThread] INFO  c.x.j.a.b.s.thread.JobRegistryHelper - >>>>>>>>>>> xxl-job, JobRegistryHelper, detect changes and refresh JobGroupCache success, appname2GroupCache:{stone-executor=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='http://192.168.2.189:9999/', accessToken='default_token', updateTime=null}, xxl-job-executor-sample-ai=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, xxl-job-executor-sample=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}}, id2GroupCache:{1=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 2=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 3=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='http://192.168.2.189:9999/', accessToken='default_token', updateTime=null}}
+2026-07-22 16:23:09.874 [http-nio-18080-exec-6] INFO  c.x.j.a.b.s.impl.XxlJobServiceImpl - >>>>>>>>>>> xxl-job operation log: operator = casdoor_service, type = jobinfo-trigger, content = 5
+2026-07-22 16:44:30.058 [JobRegistryHelper#registryMonitorThread] INFO  c.x.j.a.b.s.thread.JobRegistryHelper - >>>>>>>>>>> xxl-job, JobRegistryHelper, detect changes and refresh JobGroupCache success, appname2GroupCache:{stone-executor=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, xxl-job-executor-sample-ai=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, xxl-job-executor-sample=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}}, id2GroupCache:{1=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 2=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 3=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='null', accessToken='default_token', updateTime=null}}
+2026-07-22 16:45:00.078 [JobRegistryHelper#registryMonitorThread] INFO  c.x.j.a.b.s.thread.JobRegistryHelper - >>>>>>>>>>> xxl-job, JobRegistryHelper, detect changes and refresh JobGroupCache success, appname2GroupCache:{stone-executor=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='http://192.168.2.189:9999/', accessToken='default_token', updateTime=null}, xxl-job-executor-sample-ai=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, xxl-job-executor-sample=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}}, id2GroupCache:{1=XxlJobGroup{id=1, appname='xxl-job-executor-sample', name='通用执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 2=XxlJobGroup{id=2, appname='xxl-job-executor-sample-ai', name='AI执行器Sample', addressType=0, addressList='null', accessToken='default_token', updateTime=null}, 3=XxlJobGroup{id=3, appname='stone-executor', name='Stone执行器', addressType=0, addressList='http://192.168.2.189:9999/', accessToken='default_token', updateTime=null}}
+2026-07-22 17:27:18.844 [http-nio-18080-exec-6] INFO  c.x.j.a.b.s.impl.XxlJobServiceImpl - >>>>>>>>>>> xxl-job operation log: operator = casdoor_service, type = jobinfo-trigger, content = 5
+2026-07-22 17:30:05.470 [http-nio-18080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'author' for method parameter type String is not present]
+2026-07-22 17:32:10.278 [http-nio-18080-exec-8] INFO  c.x.j.a.b.s.impl.XxlJobServiceImpl - >>>>>>>>>>> xxl-job operation log: operator = casdoor_service, type = jobinfo-update, content = {"id":5,"jobGroup":1,"name":"测试","author":"测试","alarmEmail":"","scheduleType":"CRON","scheduleConf":"0 0 * * * ?","misfireStrategy":"DO_NOTHING","executorRouteStrategy":"FIRST","executorHandler":"demoJobHandler","executorParam":"","executorBlockStrategy":"SERIAL_EXECUTION","executorTimeout":0,"executorFailRetryCount":0,"glueType":"BEAN","glueSource":"","glueRemark":"","glueUpdatetime":"2026-07-22 15:25:41","childJobId":"","triggerStatus":1,"triggerLastTime":1784710800000,"triggerNextTime":1784714400000,"addTime":"2026-07-22 15:25:41","updateTime":"2026-07-22 17:32:10"}
+2026-07-22 17:32:23.946 [http-nio-18080-exec-9] INFO  c.x.j.a.b.s.impl.XxlJobServiceImpl - >>>>>>>>>>> xxl-job operation log: operator = casdoor_service, type = jobinfo-trigger, content = 5
+2026-07-22 17:33:47.760 [http-nio-18080-exec-7] INFO  c.x.j.a.b.s.impl.XxlJobServiceImpl - >>>>>>>>>>> xxl-job operation log: operator = casdoor_service, type = jobinfo-trigger, content = 5
+2026-07-22 17:34:59.124 [http-nio-18080-exec-2] INFO  c.x.j.a.b.s.impl.XxlJobServiceImpl - >>>>>>>>>>> xxl-job operation log: operator = casdoor_service, type = jobinfo-trigger, content = 5
+2026-07-22 17:36:07.017 [http-nio-18080-exec-8] INFO  c.x.j.a.b.s.impl.XxlJobServiceImpl - >>>>>>>>>>> xxl-job operation log: operator = casdoor_service, type = jobinfo-trigger, content = 5
+2026-07-22 17:56:12.025 [xxl-job, admin JobScheduleHelper#scheduleThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5aee99d8 (Communications link failure
+
+The last packet successfully received from the server was 2,417 milliseconds ago. The last packet sent successfully to the server was 2,434 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 17:56:12.028 [xxl-job, admin JobScheduleHelper#scheduleThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@10d41c22 (Communications link failure
+
+The last packet successfully received from the server was 12,012 milliseconds ago. The last packet sent successfully to the server was 12,018 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 17:56:12.028 [xxl-job, admin JobScheduleHelper#scheduleThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@34965131 (Communications link failure
+
+The last packet successfully received from the server was 11,939 milliseconds ago. The last packet sent successfully to the server was 11,948 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 17:56:12.029 [xxl-job, admin JobScheduleHelper#scheduleThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1a982e22 (Communications link failure
+
+The last packet successfully received from the server was 12,004 milliseconds ago. The last packet sent successfully to the server was 12,013 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 17:56:12.029 [xxl-job, admin JobScheduleHelper#scheduleThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@c7a1c7e (Communications link failure
+
+The last packet successfully received from the server was 2,012 milliseconds ago. The last packet sent successfully to the server was 2,016 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 17:56:12.030 [xxl-job, admin JobScheduleHelper#scheduleThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3cff24df (Communications link failure
+
+The last packet successfully received from the server was 66,300 milliseconds ago. The last packet sent successfully to the server was 66,303 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 17:56:12.030 [xxl-job, admin JobScheduleHelper#scheduleThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3a66f5a8 (Communications link failure
+
+The last packet successfully received from the server was 97,717 milliseconds ago. The last packet sent successfully to the server was 97,725 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 17:56:12.031 [xxl-job, admin JobScheduleHelper#scheduleThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@615425f8 (Communications link failure
+
+The last packet successfully received from the server was 20,148 milliseconds ago. The last packet sent successfully to the server was 20,154 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 17:56:12.031 [xxl-job, admin JobScheduleHelper#scheduleThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3d114c40 (Communications link failure
+
+The last packet successfully received from the server was 17,212 milliseconds ago. The last packet sent successfully to the server was 17,218 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 17:56:12.031 [xxl-job, admin JobScheduleHelper#scheduleThread] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@788d4ee1 (Communications link failure
+
+The last packet successfully received from the server was 41,416 milliseconds ago. The last packet sent successfully to the server was 41,422 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+2026-07-22 17:56:22.011 [xxl-job, admin JobScheduleHelper#scheduleThread] ERROR c.x.j.a.b.s.thread.JobScheduleHelper - >>>>>>>>>>> xxl-job, JobScheduleHelper#scheduleThread error:Could not open JDBC Connection for transaction
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:319)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at com.xxl.job.admin.business.scheduler.thread.JobScheduleHelper$1.run(JobScheduleHelper.java:79)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.sql.SQLTransientConnectionException: HikariCP - Connection is not available, request timed out after 10006ms (total=0, active=0, idle=0, waiting=1)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:714)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:184)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:142)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:270)
+	... 4 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 41,416 milliseconds ago. The last packet sent successfully to the server was 41,422 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:839)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:687)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionDead(PoolBase.java:173)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:166)
+	... 7 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 41,416 milliseconds ago. The last packet sent successfully to the server was 41,422 milliseconds ago.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:635)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:689)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:938)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:817)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:791)
+	... 10 common frames omitted
+Caused by: java.net.SocketException: Broken pipe
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:425)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:445)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:831)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1045)
+	at java.base/sun.security.ssl.SSLSocketOutputRecord.deliver(SSLSocketOutputRecord.java:345)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1308)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at com.mysql.cj.protocol.a.SimplePacketSender.send(SimplePacketSender.java:48)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketSender.send(TimeTrackingPacketSender.java:43)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:628)
+	... 14 common frames omitted
+2026-07-22 17:56:30.009 [JobFailAlarmMonitorHelper#monitorThread] ERROR c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobFailAlarmMonitorHelper#monitorThread] run error:
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobLogMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobLogMapper.findFailJobLogIds
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+org.mybatis.spring.MyBatisSystemException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobLogMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobLogMapper.findFailJobLogIds
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:101)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:362)
+	at jdk.proxy2/jdk.proxy2.$Proxy80.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:209)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy88.findFailJobLogIds(Unknown Source)
+	at com.xxl.job.admin.business.scheduler.thread.JobFailAlarmMonitorHelper$1.run(JobFailAlarmMonitorHelper.java:38)
+	at com.xxl.tool.concurrent.CyclicThread$CycleRunnable.run(CyclicThread.java:95)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobLogMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobLogMapper.findFailJobLogIds
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:156)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at jdk.internal.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:348)
+	... 10 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:83)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:70)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:348)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:89)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:64)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	... 16 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: HikariCP - Connection is not available, request timed out after 10004ms (total=0, active=0, idle=0, waiting=3)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:714)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:184)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:142)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	... 26 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 41,416 milliseconds ago. The last packet sent successfully to the server was 41,422 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:839)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:687)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionDead(PoolBase.java:173)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:166)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:142)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:270)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at com.xxl.job.admin.business.scheduler.thread.JobScheduleHelper$1.run(JobScheduleHelper.java:79)
+	... 1 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 41,416 milliseconds ago. The last packet sent successfully to the server was 41,422 milliseconds ago.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:635)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:689)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:938)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:817)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:791)
+	... 10 common frames omitted
+Caused by: java.net.SocketException: Broken pipe
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:425)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:445)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:831)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1045)
+	at java.base/sun.security.ssl.SSLSocketOutputRecord.deliver(SSLSocketOutputRecord.java:345)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1308)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at com.mysql.cj.protocol.a.SimplePacketSender.send(SimplePacketSender.java:48)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketSender.send(TimeTrackingPacketSender.java:43)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:628)
+	... 14 common frames omitted
+2026-07-22 17:56:32.017 [xxl-job, admin JobScheduleHelper#scheduleThread] ERROR c.x.j.a.b.s.thread.JobScheduleHelper - >>>>>>>>>>> xxl-job, JobScheduleHelper#scheduleThread error:Could not open JDBC Connection for transaction
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:319)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at com.xxl.job.admin.business.scheduler.thread.JobScheduleHelper$1.run(JobScheduleHelper.java:79)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.sql.SQLTransientConnectionException: HikariCP - Connection is not available, request timed out after 10003ms (total=0, active=0, idle=0, waiting=2)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:714)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:184)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:142)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:270)
+	... 4 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 41,416 milliseconds ago. The last packet sent successfully to the server was 41,422 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:839)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:687)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionDead(PoolBase.java:173)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:166)
+	... 7 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 41,416 milliseconds ago. The last packet sent successfully to the server was 41,422 milliseconds ago.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:635)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:689)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:938)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:817)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:791)
+	... 10 common frames omitted
+Caused by: java.net.SocketException: Broken pipe
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:425)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:445)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:831)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1045)
+	at java.base/sun.security.ssl.SSLSocketOutputRecord.deliver(SSLSocketOutputRecord.java:345)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1308)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at com.mysql.cj.protocol.a.SimplePacketSender.send(SimplePacketSender.java:48)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketSender.send(TimeTrackingPacketSender.java:43)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:628)
+	... 14 common frames omitted
+2026-07-22 17:56:40.006 [JobRegistryHelper#registryMonitorThread] ERROR c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobRegistryHelper#registryMonitorThread] run error:
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobGroupMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobGroupMapper.findByAddressType
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+org.mybatis.spring.MyBatisSystemException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobGroupMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobGroupMapper.findByAddressType
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:101)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:362)
+	at jdk.proxy2/jdk.proxy2.$Proxy80.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:209)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy86.findByAddressType(Unknown Source)
+	at com.xxl.job.admin.business.scheduler.thread.JobRegistryHelper$3.run(JobRegistryHelper.java:76)
+	at com.xxl.tool.concurrent.CyclicThread$CycleRunnable.run(CyclicThread.java:95)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobGroupMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobGroupMapper.findByAddressType
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:156)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at jdk.internal.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:348)
+	... 10 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:83)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:70)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:348)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:89)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:64)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	... 16 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: HikariCP - Connection is not available, request timed out after 10003ms (total=0, active=0, idle=0, waiting=4)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:714)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:184)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:142)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	... 26 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 41,416 milliseconds ago. The last packet sent successfully to the server was 41,422 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:839)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:687)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionDead(PoolBase.java:173)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:166)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:142)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:270)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at com.xxl.job.admin.business.scheduler.thread.JobScheduleHelper$1.run(JobScheduleHelper.java:79)
+	... 1 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 41,416 milliseconds ago. The last packet sent successfully to the server was 41,422 milliseconds ago.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:635)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:689)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:938)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:817)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:791)
+	... 10 common frames omitted
+Caused by: java.net.SocketException: Broken pipe
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:425)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:445)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:831)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1045)
+	at java.base/sun.security.ssl.SSLSocketOutputRecord.deliver(SSLSocketOutputRecord.java:345)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1308)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at com.mysql.cj.protocol.a.SimplePacketSender.send(SimplePacketSender.java:48)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketSender.send(TimeTrackingPacketSender.java:43)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:628)
+	... 14 common frames omitted
+2026-07-22 17:56:42.023 [xxl-job, admin JobScheduleHelper#scheduleThread] ERROR c.x.j.a.b.s.thread.JobScheduleHelper - >>>>>>>>>>> xxl-job, JobScheduleHelper#scheduleThread error:Could not open JDBC Connection for transaction
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:319)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at com.xxl.job.admin.business.scheduler.thread.JobScheduleHelper$1.run(JobScheduleHelper.java:79)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.sql.SQLTransientConnectionException: HikariCP - Connection is not available, request timed out after 10005ms (total=0, active=0, idle=0, waiting=2)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:714)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:184)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:142)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:270)
+	... 4 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 41,416 milliseconds ago. The last packet sent successfully to the server was 41,422 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:839)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:687)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionDead(PoolBase.java:173)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:166)
+	... 7 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 41,416 milliseconds ago. The last packet sent successfully to the server was 41,422 milliseconds ago.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:635)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:689)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:938)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:817)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:791)
+	... 10 common frames omitted
+Caused by: java.net.SocketException: Broken pipe
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:425)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:445)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:831)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1045)
+	at java.base/sun.security.ssl.SSLSocketOutputRecord.deliver(SSLSocketOutputRecord.java:345)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1308)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at com.mysql.cj.protocol.a.SimplePacketSender.send(SimplePacketSender.java:48)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketSender.send(TimeTrackingPacketSender.java:43)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:628)
+	... 14 common frames omitted
+2026-07-22 17:56:50.009 [JobFailAlarmMonitorHelper#monitorThread] ERROR c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobFailAlarmMonitorHelper#monitorThread] run error:
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobLogMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobLogMapper.findFailJobLogIds
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+org.mybatis.spring.MyBatisSystemException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobLogMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobLogMapper.findFailJobLogIds
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:101)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:362)
+	at jdk.proxy2/jdk.proxy2.$Proxy80.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:209)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy88.findFailJobLogIds(Unknown Source)
+	at com.xxl.job.admin.business.scheduler.thread.JobFailAlarmMonitorHelper$1.run(JobFailAlarmMonitorHelper.java:38)
+	at com.xxl.tool.concurrent.CyclicThread$CycleRunnable.run(CyclicThread.java:95)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobLogMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobLogMapper.findFailJobLogIds
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:156)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at jdk.internal.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:348)
+	... 10 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:83)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:70)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:348)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:89)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:64)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	... 16 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: HikariCP - Connection is not available, request timed out after 10004ms (total=0, active=0, idle=0, waiting=1)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:714)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:184)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:142)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	... 26 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:102)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:81)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:55)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:65)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:914)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:833)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	... 1 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:854)
+	... 15 common frames omitted
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:551)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:639)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 17 common frames omitted
+2026-07-22 17:56:52.027 [xxl-job, admin JobScheduleHelper#scheduleThread] ERROR c.x.j.a.b.s.thread.JobScheduleHelper - >>>>>>>>>>> xxl-job, JobScheduleHelper#scheduleThread error:Could not open JDBC Connection for transaction
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:319)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at com.xxl.job.admin.business.scheduler.thread.JobScheduleHelper$1.run(JobScheduleHelper.java:79)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.sql.SQLTransientConnectionException: HikariCP - Connection is not available, request timed out after 10004ms (total=0, active=0, idle=0, waiting=0)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:714)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:184)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:142)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:270)
+	... 4 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:102)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:81)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:55)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:65)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:914)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:833)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	... 1 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:854)
+	... 15 common frames omitted
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:551)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:639)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 17 common frames omitted
+2026-07-22 17:57:02.032 [xxl-job, admin JobScheduleHelper#scheduleThread] ERROR c.x.j.a.b.s.thread.JobScheduleHelper - >>>>>>>>>>> xxl-job, JobScheduleHelper#scheduleThread error:Could not open JDBC Connection for transaction
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:319)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at com.xxl.job.admin.business.scheduler.thread.JobScheduleHelper$1.run(JobScheduleHelper.java:79)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.sql.SQLTransientConnectionException: HikariCP - Connection is not available, request timed out after 10005ms (total=0, active=0, idle=0, waiting=4)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:714)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:184)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:142)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:270)
+	... 4 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:102)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:81)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:55)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:65)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:914)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:833)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	... 1 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:854)
+	... 15 common frames omitted
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:551)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:639)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 17 common frames omitted
+2026-07-22 17:57:10.013 [JobFailAlarmMonitorHelper#monitorThread] ERROR c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobFailAlarmMonitorHelper#monitorThread] run error:
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobLogMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobLogMapper.findFailJobLogIds
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+org.mybatis.spring.MyBatisSystemException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobLogMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobLogMapper.findFailJobLogIds
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:101)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:362)
+	at jdk.proxy2/jdk.proxy2.$Proxy80.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:209)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy88.findFailJobLogIds(Unknown Source)
+	at com.xxl.job.admin.business.scheduler.thread.JobFailAlarmMonitorHelper$1.run(JobFailAlarmMonitorHelper.java:38)
+	at com.xxl.tool.concurrent.CyclicThread$CycleRunnable.run(CyclicThread.java:95)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobLogMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobLogMapper.findFailJobLogIds
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:156)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at jdk.internal.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:348)
+	... 10 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:83)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:70)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:348)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:89)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:64)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	... 16 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: HikariCP - Connection is not available, request timed out after 10007ms (total=0, active=0, idle=0, waiting=2)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:714)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:184)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:142)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	... 26 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:102)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:81)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:55)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:65)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:914)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:833)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	... 1 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:854)
+	... 15 common frames omitted
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:551)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:639)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 17 common frames omitted
+2026-07-22 17:57:10.009 [JobLogReportHelper#logReportThread] ERROR c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobLogReportHelper#logReportThread] run error:
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobLogMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobLogMapper.findLogReport
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+org.mybatis.spring.MyBatisSystemException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobLogMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobLogMapper.findLogReport
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:101)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:362)
+	at jdk.proxy2/jdk.proxy2.$Proxy80.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:169)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy88.findLogReport(Unknown Source)
+	at com.xxl.job.admin.business.scheduler.thread.JobLogReportHelper$1.run(JobLogReportHelper.java:70)
+	at com.xxl.tool.concurrent.CyclicThread$CycleRunnable.run(CyclicThread.java:95)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobLogMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobLogMapper.findLogReport
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:156)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:75)
+	at jdk.internal.reflect.GeneratedMethodAccessor23.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:348)
+	... 9 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:83)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:70)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:348)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:89)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:64)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	... 16 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: HikariCP - Connection is not available, request timed out after 10001ms (total=0, active=0, idle=0, waiting=3)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:714)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:184)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:142)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	... 26 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:102)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:81)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:55)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:65)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:914)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:833)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	... 1 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:854)
+	... 15 common frames omitted
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:551)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:639)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 17 common frames omitted
+2026-07-22 17:57:10.009 [JobRegistryHelper#registryMonitorThread] ERROR c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobRegistryHelper#registryMonitorThread] run error:
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobGroupMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobGroupMapper.findByAddressType
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+org.mybatis.spring.MyBatisSystemException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobGroupMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobGroupMapper.findByAddressType
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:101)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:362)
+	at jdk.proxy2/jdk.proxy2.$Proxy80.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:209)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy86.findByAddressType(Unknown Source)
+	at com.xxl.job.admin.business.scheduler.thread.JobRegistryHelper$3.run(JobRegistryHelper.java:76)
+	at com.xxl.tool.concurrent.CyclicThread$CycleRunnable.run(CyclicThread.java:95)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobGroupMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobGroupMapper.findByAddressType
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:156)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at jdk.internal.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:348)
+	... 10 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:83)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:70)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:348)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:89)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:64)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	... 16 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: HikariCP - Connection is not available, request timed out after 10002ms (total=0, active=0, idle=0, waiting=3)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:714)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:184)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:142)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	... 26 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:102)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:81)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:55)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:65)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:914)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:833)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	... 1 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:854)
+	... 15 common frames omitted
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:551)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:639)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 17 common frames omitted
+2026-07-22 17:57:10.018 [JobCompleteHelper#jobMonitorThread] ERROR c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobCompleteHelper#jobMonitorThread] run error:
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobLogMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobLogMapper.findLostJobIds
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+org.mybatis.spring.MyBatisSystemException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobLogMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobLogMapper.findLostJobIds
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:101)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:362)
+	at jdk.proxy2/jdk.proxy2.$Proxy80.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:209)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy88.findLostJobIds(Unknown Source)
+	at com.xxl.job.admin.business.scheduler.thread.JobCompleteHelper$3.run(JobCompleteHelper.java:64)
+	at com.xxl.tool.concurrent.CyclicThread$CycleRunnable.run(CyclicThread.java:95)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/huanglei/Workspace/Codes/stone/service/stone-job-admin/xxl-job-admin/target/classes/mapper/business/XxlJobLogMapper.xml]
+### The error may involve com.xxl.job.admin.business.mapper.XxlJobLogMapper.findLostJobIds
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:156)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at jdk.internal.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:348)
+	... 10 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:83)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:70)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:348)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:89)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:64)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	... 16 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: HikariCP - Connection is not available, request timed out after 10012ms (total=0, active=0, idle=0, waiting=1)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:714)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:184)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:142)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	... 26 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:102)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:81)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:55)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:65)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:914)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:833)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	... 1 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:854)
+	... 15 common frames omitted
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:551)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:639)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 17 common frames omitted
+2026-07-22 17:57:12.041 [xxl-job, admin JobScheduleHelper#scheduleThread] ERROR c.x.j.a.b.s.thread.JobScheduleHelper - >>>>>>>>>>> xxl-job, JobScheduleHelper#scheduleThread error:Could not open JDBC Connection for transaction
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:319)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at com.xxl.job.admin.business.scheduler.thread.JobScheduleHelper$1.run(JobScheduleHelper.java:79)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.sql.SQLTransientConnectionException: HikariCP - Connection is not available, request timed out after 10007ms (total=0, active=0, idle=0, waiting=0)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:714)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:184)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:142)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:270)
+	... 4 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:102)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:81)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:55)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:65)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:914)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:833)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	... 1 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:854)
+	... 15 common frames omitted
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:551)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:639)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 17 common frames omitted
+2026-07-22 17:57:20.100 [HikariCP:connection-adder] WARN  com.zaxxer.hikari.pool.PoolBase - HikariCP - Pool is empty, failed to create/setup connection (f24ba509-e805-451e-9eeb-6387b952f6b7)
+java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:102)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:81)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:55)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:65)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:914)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:833)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:854)
+	... 15 common frames omitted
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:551)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:639)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 17 common frames omitted
+2026-07-22 17:57:22.050 [xxl-job, admin JobScheduleHelper#scheduleThread] ERROR c.x.j.a.b.s.thread.JobScheduleHelper - >>>>>>>>>>> xxl-job, JobScheduleHelper#scheduleThread error:Could not open JDBC Connection for transaction
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:319)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at com.xxl.job.admin.business.scheduler.thread.JobScheduleHelper$1.run(JobScheduleHelper.java:79)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.sql.SQLTransientConnectionException: HikariCP - Connection is not available, request timed out after 10005ms (total=0, active=0, idle=0, waiting=1)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:714)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:184)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:142)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:270)
+	... 4 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:102)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:81)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:55)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:65)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:914)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:833)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	... 1 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:854)
+	... 15 common frames omitted
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:551)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:639)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 17 common frames omitted
+2026-07-22 17:57:29.403 [JobRegistryHelper#registryMonitorThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobRegistryHelper#registryMonitorThread] stop.
+2026-07-22 17:57:29.408 [JobLogReportHelper#logReportThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobLogReportHelper#logReportThread] stop.
+2026-07-22 17:57:29.414 [JobFailAlarmMonitorHelper#monitorThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobFailAlarmMonitorHelper#monitorThread] stop.
+2026-07-22 17:57:29.416 [JobCompleteHelper#jobMonitorThread] INFO  c.xxl.tool.concurrent.CyclicThread - >>>>>>>>>>> CyclicThread[name = JobCompleteHelper#jobMonitorThread] stop.
+2026-07-22 17:57:29.430 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-22 17:57:29.440 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-07-22 17:57:29.465 [SpringApplicationShutdownHook] INFO  c.x.s.core.bootstrap.XxlSsoBootstrap - >>>>>>>>>>> xxl-sso XxlSsoBootstrap stopped.
+2026-07-22 17:57:30.472 [xxl-job, admin JobScheduleHelper#scheduleThread] INFO  c.x.j.a.b.s.thread.JobScheduleHelper - >>>>>>>>>>> xxl-job, JobScheduleHelper#scheduleThread stop
+2026-07-22 17:57:31.005 [xxl-job, admin JobScheduleHelper#ringThread] INFO  c.x.j.a.b.s.thread.JobScheduleHelper - >>>>>>>>>>> xxl-job, JobScheduleHelper#ringThread stop
+2026-07-22 17:57:31.478 [SpringApplicationShutdownHook] INFO  c.x.j.a.b.s.thread.JobScheduleHelper - >>>>>>>>>>> xxl-job, JobScheduleHelper stop
+2026-07-22 17:57:31.479 [SpringApplicationShutdownHook] INFO  c.x.j.a.b.s.t.JobTriggerPoolHelper - >>>>>>>>> xxl-job trigger thread pool shutdown success.
+2026-07-22 17:57:31.480 [SpringApplicationShutdownHook] INFO  c.x.j.a.b.s.c.XxlJobAdminBootstrap - >>>>>>>>> xxl-job admin stopped.
+2026-07-22 17:57:31.493 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Shutdown initiated...

@@ -3,6 +3,7 @@ package com.xxl.job.admin.framework.web.casdoor;
 import com.xxl.job.admin.framework.model.XxlJobUser;
 import com.xxl.sso.core.model.LoginInfo;
 import com.xxl.tool.id.UUIDTool;
+import java.util.List;
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -76,8 +77,20 @@ public class MachineAuthFilter implements Filter {
 		// 2. 查/建 xxl_job_user（固定为配置的服务账号，Stone 已在自身侧完成 job:* 权限校验）
 		XxlJobUser user = userResolver.resolve(properties.getServiceAccount());
 
-		// 3. 将登录态写入请求上下文，等价于 SSO 登录后写入的 xxl_sso_user 属性
-		LoginInfo loginInfo = new LoginInfo(String.valueOf(user.getId()), UUIDTool.getSimpleUUID());
+		// 3. 将登录态写入请求上下文，等价于 SSO 登录后写入的 xxl_sso_user 属性。
+		//    注意：2 参构造器只设 userId/signature，会漏掉 userName 与 roleList，
+		//    导致 JobGroupPermissionUtil 的 hasRole 校验失败（权限拦截[username=null]）。
+		//    这里用完整构造器，显式赋予 ADMIN 角色——机器服务账号在 CasdoorUserResolver
+		//    中固定为管理员（role=1），Stone 侧已完成 job:* 权限校验，admin 无需再做细粒度判断。
+		LoginInfo loginInfo = new LoginInfo(
+				String.valueOf(user.getId()),                 // userId
+				user.getUsername(),                            // userName
+				user.getUsername(),                            // realName
+				null,                                          // extraInfo
+				List.of(com.xxl.job.admin.framework.constant.Consts.ADMIN_ROLE), // roleList = ["ADMIN"]
+				null,                                          // permissionList
+				System.currentTimeMillis() + 3600_000L,        // expireTime
+				UUIDTool.getSimpleUUID());                     // signature
 		request.setAttribute(LOGIN_ATTR, loginInfo);
 
 		chain.doFilter(req, res);

@@ -114,10 +114,10 @@ public class JobLogController {
 	public Response<PageModel<XxlJobLogDTO>> pageList(HttpServletRequest request,
 													  @RequestParam(required = false, defaultValue = "0") int offset,
 													  @RequestParam(required = false, defaultValue = "10") int pagesize,
-													  @RequestParam int jobGroup,
-													  @RequestParam int jobId,
-													  @RequestParam int logStatus,
-													  @RequestParam String filterTime) {
+												  @RequestParam("jobGroup") int jobGroup,
+												  @RequestParam("jobId") int jobId,
+												  @RequestParam("logStatus") int logStatus,
+												  @RequestParam("filterTime") String filterTime) {
 
 		// valid jobGroup permission
 		JobGroupPermissionUtil.validJobGroupPermission(request, jobGroup);
